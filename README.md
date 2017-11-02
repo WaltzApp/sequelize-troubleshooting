@@ -7,8 +7,8 @@ See [the stackoverflow question](https://stackoverflow.com/questions/47064573/wh
 
 - Install Postgres
 - Launch Postgres
-- Create a database called `troubleshooting` (or any other name, but don't forget to use that same name in [the config](config.js))
-- You might also need to change `username` and `password` for the database in [the config](config.js)
+- Create a database called `troubleshooting` (or any other name, but don't forget to use that same name in [the config](sequelize/config.js))
+- You might also need to change `username` and `password` for the database in [the config](sequelize/config.js)
 - clone this repo
 - `npm install`
 - `npm start`
