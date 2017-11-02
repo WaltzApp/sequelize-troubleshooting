@@ -1,0 +1,32 @@
+{
+  "name": "sequelize-troubleshooting",
+  "version": "1.0.0",
+  "description": "Minimal reproduction of a problem with Sequelize",
+  "scripts": {
+    "prestart": "npm run migrate",
+    "start": "node index.js",
+    "migrate": "sequelize db:migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaltzApp/sequelize-troubleshooting.git"
+  },
+  "author": "Shawn Inder <shawn.inder@waltzapp.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/WaltzApp/sequelize-troubleshooting/issues"
+  },
+  "homepage": "https://github.com/WaltzApp/sequelize-troubleshooting#readme",
+  "keywords": [],
+  "contributors": [
+    "Shawn Inder <shawn.inder@waltzapp.com"
+  ],
+  "engines": {},
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "glob": "^7.1.2",
+    "pg": "^7.3.0",
+    "sequelize": "^4.22.0",
+    "sequelize-cli": "^3.0.0"
+  }
+}
