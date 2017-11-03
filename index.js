@@ -13,20 +13,19 @@ const performQuery = (db) => {
   const sql = {
     include: {
       model: invitations,
-      // as: 'invitation',
       on: {
         user: Sequelize.where(
           Sequelize.col('usersRoles.userUid'),
           '=',
-          Sequelize.col('invitation.guestUid')),
+          Sequelize.col('invitations.guestUid')),
         propertyManager: Sequelize.where(
           Sequelize.col('usersRoles.propertyManagerUid'),
           '=',
-          Sequelize.col('invitation.propertyManagerUid')),
+          Sequelize.col('invitations.propertyManagerUid')),
         tenant: Sequelize.where(
           Sequelize.col('usersRoles.tenantUid'),
           '=',
-          Sequelize.col('invitation.tenantUid')),
+          Sequelize.col('invitations.tenantUid')),
       },
     },
   };

@@ -22,11 +22,26 @@ module.exports = (sequelize, DataTypes) => {
       comment: 'Table to house Invitation info',
       freezeTableName: true,
       timestamps: false,
+      indexes: [
+        {
+          name: 'invitationPropertyManager',
+          fields: ['guestUid', 'propertyManagerUid'],
+          unique: true,
+          where: {
+            propertyManagerUid: { $ne: null },
+            tenantUid: null,
+          },
+        },
+        {
+          name: 'invitationTenant',
+          fields: ['guestUid', 'tenantUid'],
+          unique: true,
+          where: {
+            propertyManagerUid: null,
+            tenantUid: { $ne: null },
+          },
+        }],
     });
-
-  invitations.associate = (models) => {
-    models.invitations.hasMany(models.usersRoles);
-  };
 
   return invitations;
 };

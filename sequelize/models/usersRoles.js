@@ -59,11 +59,6 @@ module.exports = (sequelize, DataTypes) => {
             tenantUid: { $ne: null },
           },
         },
-        {
-          name: 'composite',
-          fields: ['userUid', 'roleUid', 'oemUid', 'propertyManagerUid', 'tenantUid'],
-          unique: true,
-        },
       ],
       comment: 'Table to house the concept of a users being a Role under a Tenant, Property Manager or OEM',
       freezeTableName: true,
